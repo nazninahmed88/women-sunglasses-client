@@ -1,0 +1,18 @@
+.card-cart{
+    background-color: white;
+    width: 25rem;
+    height: 38rem;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 767px){
+    .card-cart{
+        width: 23rem;
+        margin: 0;
+        padding: 0;
+    }
+    .colCart{
+        width:27rem;
+    }
+}

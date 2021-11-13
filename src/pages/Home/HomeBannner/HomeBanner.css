@@ -1,0 +1,40 @@
+.banner{
+    background-color:  #264653;
+}
+.banner h1{
+    font-size: 80px;   
+    margin-left: 30px;
+}
+.banner p{
+    font-size: 20px;
+    margin-left: 30px;
+}
+.banner button{
+    width: 200px;
+    margin-left: 30px;
+}
+.banner img{
+    width: 550px;
+    height: 500px;
+}
+@media only screen and (max-width: 767px){
+    .banner{
+        max-width: 100%;
+    }
+    .banner img{
+        width: 250px;
+        height: 220px;
+       
+    }
+    .banner h1{
+        font-size: 38px;
+        margin: 0px;
+    }
+    .banner p{
+        font-size: 15px;
+        margin-left: 0px;
+    }
+    .banner button{
+        margin-left: 0px;
+    }
+}

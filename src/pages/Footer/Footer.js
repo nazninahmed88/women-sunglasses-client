@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="row" >
                         <div className="col-lg-3 footer-anchor">
                             <a className="navbar-brand fs-2" to='/home'><span className='text-danger'>SUN</span><span className='text-warning'>GLASSES</span></a>
-                            <p>Quality With New Standards</p>
+                            
                         </div>
                         <div className="col-lg-2 footer-anchor">
                             <h3>Compnany</h3><br />

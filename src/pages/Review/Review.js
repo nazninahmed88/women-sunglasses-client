@@ -23,6 +23,7 @@ const Review = () => {
             <form className='addService' onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name")} value={user.displayName} placeholder='Name' />
                 <input {...register("email")} value={user.email} placeholder='Email' />
+                <input type="number" {...register("rate", { min: 1, max: 99 })} placeholder='Rating Point' />
                 <br />
                 <textarea {...register("review")} rows="4" cols="50" placeholder='Review Text' />
                 <input type="submit" />

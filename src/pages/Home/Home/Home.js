@@ -12,7 +12,9 @@ const Home = () => {
         <div>
             <Header></Header>
             <HomeBanner></HomeBanner>
+            <hr />
             <Items></Items>
+            <hr />
             <DisplayReviews></DisplayReviews>
             <br />
             <hr />

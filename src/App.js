@@ -20,7 +20,7 @@ import DisplayReviews from './pages/DisplayReview/DisplayReviews/DisplayReviews'
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <AuthProvider>
         <BrowserRouter>
           <Switch>

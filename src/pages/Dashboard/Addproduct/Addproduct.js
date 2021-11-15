@@ -6,7 +6,7 @@ import './Addproduct.css';
 const Addproduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/addservice', data)
+        axios.post('https://intense-plateau-07914.herokuapp.com/addservice', data)
             .then(res => {
 
                 if (res.data.insertedId) {

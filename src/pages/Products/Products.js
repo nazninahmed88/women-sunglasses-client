@@ -7,13 +7,13 @@ import Header from '../Shared/Header/Header';
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/products'
+        const url = 'https://intense-plateau-07914.herokuapp.com/products'
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
     const handleCart = cart => {
-        axios.post('http://localhost:5000/cart', cart)
+        axios.post('https://intense-plateau-07914.herokuapp.com/cart', cart)
             .then(res => {
                 alert('Added Successfully');
             })

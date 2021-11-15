@@ -14,7 +14,7 @@ const Makeadmin = () => {
     const handleAdmin=e=>{
         const user = {email};
         // console.log(user);
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://intense-plateau-07914.herokuapp.com/users/admin',{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

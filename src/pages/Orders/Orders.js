@@ -11,7 +11,7 @@ const Orders = () => {
     const { user } = useFirebase();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://intense-plateau-07914.herokuapp.com/orders', data)
             .then(res => {
 
                 if (res.data.insertedId) {

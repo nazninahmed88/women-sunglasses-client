@@ -9,7 +9,7 @@ const Review = () => {
     const { user } = useFirebase();
     // console.log(user);
     const onSubmit = data => {
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://intense-plateau-07914.herokuapp.com/review', data)
             .then(res => {
 
                 if (res.data.insertedId) {

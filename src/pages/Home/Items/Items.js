@@ -6,13 +6,13 @@ import Item from '../Item/Item';
 const Items = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/cars';
+        const url = 'https://intense-plateau-07914.herokuapp.com/cars';
         fetch(url)
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
     const handleCart = cart => {
-        axios.post('http://localhost:5000/cart', cart)
+        axios.post('https://intense-plateau-07914.herokuapp.com/cart', cart)
             .then(res => {
                 alert('Added Successfully');
             })

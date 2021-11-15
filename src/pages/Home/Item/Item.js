@@ -21,7 +21,7 @@ const Item = (props) => {
                         price:{price}$
                     </h5>
                     <Link to='/purchase'>
-                        <button onClick={() => handleCart(props.car)} className="button btn btn-warning">Purchase</button>
+                        <button onClick={() => handleCart(props.car)} className="button btn btn-warning">Order Now</button>
                     </Link>
                 </Card.Body>
             </Card>

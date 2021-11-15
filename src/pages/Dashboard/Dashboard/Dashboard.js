@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute'
 import Toolbar from '@mui/material/Toolbar';
 import {
     Switch,
@@ -20,10 +21,11 @@ import { Typography } from '@mui/material';
 import Makeadmin from '../MakeAdmin/Makeadmin';
 import Addproduct from '../Addproduct/Addproduct';
 import './Dashboard.css';
-import useAuth from '../../../hooks/useAuth';
-import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+
+
 import ManageOrders from '../../Manage/ManageOrders/ManageOrders';
 import ManageProducts from '../../ManageProduct/ManageProducts/ManageProducts';
+import useAuth from '../../../hooks/useAuth';
 
 const drawerWidth = 240;
 
@@ -48,7 +50,7 @@ function Dashboard(props) {
             <hr />
             <Link className='decoration' to={`${url}/review`}>Review</Link>
             <hr />
-            {
+            {admin &&
                  <Box>
                     <Link className='decoration' to={`${url}/makeadmin`}>Make Admin</Link>
                     <hr />
@@ -82,7 +84,7 @@ function Dashboard(props) {
                 >
                     <Toolbar>
                         <IconButton
-                            color="inherit"
+                            className='bg-light'
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
@@ -144,18 +146,18 @@ function Dashboard(props) {
                         <Route path={`${path}/review`}>
                             <Review></Review>
                         </Route>
-                        <Route path={`${path}/makeadmin`}>
+                        <AdminRoute path={`${path}/makeadmin`}>
                             <Makeadmin></Makeadmin>
-                        </Route>
-                        <Route path={`${path}/addproduct`}>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/addproduct`}>
                             <Addproduct></Addproduct>
-                        </Route>
-                        <Route path={`${path}/manageorder`}>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manageorder`}>
                             <ManageOrders></ManageOrders>
-                        </Route>
-                        <Route path={`${path}/manageproducts`}>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manageproducts`}>
                             <ManageProducts></ManageProducts>
-                        </Route>
+                        </AdminRoute>
                     </Switch>
 
                 </Box>

@@ -23,6 +23,9 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link fs-5 text-light" to='/home'>Home</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link fs-5 text-light" to='/products'>Explore</Link>
+                            </li>
                             {
                                 user?.email &&
                                 <li className="nav-item">
@@ -39,6 +42,10 @@ const Header = () => {
                                 {
                                     user.displayName &&
                                     <span className='text-white' style={{ marginRight: '10px' }}>{user.displayName}</span>
+                                }
+                                   {
+                                    user.email &&
+                                    <span className='text-white' style={{ marginRight: '10px' }}>({user.email})</span>
                                 }
                                 <li className="nav-item">
                                     {user?.email ?

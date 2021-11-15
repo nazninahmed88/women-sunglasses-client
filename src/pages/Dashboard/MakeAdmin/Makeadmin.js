@@ -6,29 +6,27 @@ import useAuth from '../../../hooks/useAuth';
 
 const Makeadmin = () => {
     const [email, setEmail] = useState('');
-    const [success, setSuccess] = useState(false);
-    // const { token } = useAuth();
+    const [success,setSuccess]=useState(false);
     // console.log(email);
     const handleOnBlur = e => {
         setEmail(e.target.value);
     }
-    const handleAdmin = e => {
-        const user = { email };
-        fetch('http://localhost:5000/users/admin', {
-            method: 'PUT',
-            headers: {
-                
-                'content-type': 'application/json'
+    const handleAdmin=e=>{
+        const user = {email};
+        // console.log(user);
+        fetch('http://localhost:5000/users/admin',{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
             },
-            body: JSON.stringify(user)
+            body:JSON.stringify(user)
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount) {
-                    setSuccess(true);
-                }
-                console.log(data);
-            })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.modifiedCount)
+            console.log(data);
+            setSuccess(true);
+        })
         e.preventDefault()
     }
     return (

@@ -19,7 +19,7 @@ const Product = (props) => {
                         price:${price}
                     </h5>
                     <Link to='/purchase'>
-                        <button onClick={() => handleCart(props.product)} className="button btn btn-warning">Purchase</button>
+                        <button onClick={() => handleCart(props.product)} className="button btn btn-warning">Order Now</button>
                     </Link>
                 </Card.Body>
             </Card>
